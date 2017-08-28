@@ -1,8 +1,10 @@
 ---
-# users:
-#   - name: user1
-#     present: true
-#     groups:
-#       - wheel # caution: this will allow passwordless sudo
-#     authorized_keys:
-#       - "ssh-ed25519 AAAABBBCCC123..."
+users:
+  - name: javad
+    state: present
+    groups:
+      - wheel # caution: this will allow passwordless sudo
+    authorized_keys:
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDs7WXN6EhJEWywOvWGEifbYNOZacHX9rkSUPIa8MSrHz6gfo5j8lGuFNyLlw2e9DlrPcBmwSjeInHD/OQLcOZW7yGYLeAP99Y2alCoUpnk1/8LHtnMi+ypDN4FyuZr6gN9TvZ+AOPuiwakVsr1UomFq2OhdjlwOpAlhePm6Fvt62XXFURHlcMhE8GTKuPJZiQf9JQ/TrHmY3Jt3L44Qg902eJv7HJWC1e6FBa7jJItN6nhXTeyqbfZmyi39fncS37xKY49RXepjfWBexZTkAFfmhkUf2D172D3R6ZUpr0B4B3Mt62Fmj1PK5SFQF0huplo9xZ+gWZoXLpAjPLTP95p javad@javad-XPS-15-9560"
+
+

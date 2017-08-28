@@ -42,12 +42,15 @@
 - name: configure traefik
   sudo: yes
   template:
-    src: traefik.toml.j2
-    dest: /etc/traefik/traefik.toml
+    src: "{{ item }}"
+    dest: /etc/traefik/traefik.toml2
     owner: traefik
     group: traefik
     mode: 0644
     backup: yes
+  with_items:
+    - traefik.toml.j2
+    - traefik2.toml.j2
   notify:
     - restart traefik
   tags:

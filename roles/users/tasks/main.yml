@@ -15,7 +15,7 @@
     name: "{{ item.1 }}"
     state: present
   with_subelements:
-    - users
+    - "{{ users }}"
     - groups
   tags:
     - users
@@ -39,7 +39,7 @@
     user: "{{ item.0.name }}"
     key: "{{ item.1 }}"
   with_subelements:
-    - users
+    - "{{ users }}"
     - authorized_keys
   tags:
     - users

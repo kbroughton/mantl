@@ -28,6 +28,7 @@
     - consul
     - etcd
     - dnsmasq
+    - users
 
 # ROLES - after provisioning the software that's common to all hosts, we do
 # specialized hosts. There are 4 built-in roles: control, workers (mesos),

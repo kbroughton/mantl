@@ -1,5 +1,6 @@
 ---
 # default is etc/utc in build 20141129 [http://cloud.centos.org/centos/7/images/]
+
 - name: set timezone to etc/utc
   sudo: yes
   file:
@@ -17,6 +18,13 @@
     mode: 0644
   tags:
     - common
+
+- name: configure local etc_hosts file
+  sudo: no
+  local_action: template src=hosts.j2 dest=/tmp/etc_hosts mode=0644
+  tags:
+    - common
+    - etc_hosts
 
 - name: preserve hostname
   sudo: yes
